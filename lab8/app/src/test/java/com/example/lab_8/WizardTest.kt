@@ -46,4 +46,20 @@ class WizardTest {
 
         assertEquals(70, evilWizard.mana)
     }
+
+    @Test
+    public void testTrainWithEnoughMana() {
+        Wizard wizard = new Wizard();
+        wizard.train();
+        assertEquals(expectedSpellPower, wizard.getSpellPower());
+        assertEquals(expectedMana, wizard.getMana());
+    }
+
+    @Test
+    public void testTrainWithoutEnoughMana() {
+        Wizard wizard = new Wizard();
+        wizard.train();
+        assertEquals(expectedSpellPower, wizard.getSpellPower());
+        assertEquals(expectedMana, wizard.getMana());
+    }
 }
